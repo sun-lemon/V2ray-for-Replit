@@ -15,9 +15,9 @@ if [ ! -d "~/v2ray" ];then
 	\cp -ax .v2ray ~/v2ray
 fi
 
-UUID=${UUID:-$REPL_ID}
-VMESS_WSPATH=${VMESS_WSPATH:-'/vmess'}
-VLESS_WSPATH=${VLESS_WSPATH:-'/vless'}
+UUID='7d88c645-c74b-4913-ad41-e3f7fe551a1f'
+VMESS_WSPATH=${VMESS_WSPATH:-'/data8878M'}
+VLESS_WSPATH=${VLESS_WSPATH:-'/data8878L'}
 
 sed -i "s#[0-9a-f]\{8\}-[0-9a-f]\{4\}-[0-9a-f]\{4\}-[0-9a-f]\{4\}-[0-9a-f]\{12\}#$UUID#g;s#/vmess#$VMESS_WSPATH#g;s#/vless#$VLESS_WSPATH#g" ~/v2ray/etc/config.json
 sed -i "s#/vmess#$VMESS_WSPATH#g;s#/vless#$VLESS_WSPATH#g" ~/nginx/conf/conf.d/default.conf
